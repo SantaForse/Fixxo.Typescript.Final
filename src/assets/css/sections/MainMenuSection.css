@@ -1,0 +1,125 @@
+.wideMenu {
+    width: 100%;
+    background: linear-gradient(90deg, var(--linear-gradient-dark) 0%, var(--linear-gradient-light) 100%); 
+}
+
+.mainmenu {
+    display: grid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: var(--font-poppins);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo menuicons"
+                         "menulinks menulinks" ;
+    
+}
+
+    .mainmenu .logo {
+        grid-area: logo;
+        font-size: 35px;
+        font-weight: 700;
+        color: var(--color-dark);
+        text-decoration: none;  
+    }
+
+        .mainmenu .logo:hover {
+            color: var(--color-dark);
+            text-decoration: none;
+        }
+
+    .mainmenu .menu-links {
+        overflow: hidden;
+        grid-area: menulinks;
+        display: none;
+        font-weight: 400;
+        height: 100%;
+    }
+
+    .mainmenu .menu-links .menu-link {
+            color: var(--color-main);
+            font-weight: var(--font-weight-medium);
+            text-decoration: none;
+           margin: 8px 15px;
+            transition: 200ms ease-in-out;  
+        }
+
+            .mainmenu .menu-links .menu-link:hover {
+                color: var(--color-theme);
+                text-decoration: none; 
+            }
+
+        .mainmenu .menu-links .active {
+            color: var(--color-theme);
+            text-decoration: none;
+        }
+
+    .mainmenu .menu-icons {
+        grid-area: menuicons;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+        .mainmenu .menu-icons .menu-icon {
+            background-color: var(--color-white);
+            color: var(--color-main);
+            width: 36px;
+            height: 36px;
+            margin-left: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 0 6px 4px var(--color-shadow);
+            transition: 200ms ease-in-out;
+        }
+
+            .mainmenu .menu-icons .menu-icon:hover {
+                color: var(--color-theme);
+                background-color: var(--color-dark);
+                text-decoration: none;
+            }
+
+            .mainmenu .menu-icons .active {
+                background-color: var(--color-theme);
+                text-decoration: none;
+                box-shadow: 0 0 6px 4px var(--color-shadow);
+            }
+
+        .mainmenu .menu-icons .btn-menu-icon {
+            border: none;
+            outline: none;
+            background-color: var(--color-dark);
+            color: var(--color-white);
+        }
+
+        button {
+            border: none;
+        }
+
+   
+
+
+
+
+@media (min-width: 1200px) {
+    .mainmenu {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "logo menulinks menuicons";
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: var(--font-poppins);
+    }
+
+        .mainmenu .menu-links {
+            grid-area: menulinks;
+            font-weight: 500;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+}

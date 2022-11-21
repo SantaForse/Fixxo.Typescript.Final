@@ -1,0 +1,22 @@
+html,
+body {
+    font-family: var(--font-poppins);
+    font-weight: var(--font-weight-regular);
+}
+
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: 200ms ease-in-out;
+}
+    a:hover {
+        color: var(--color-white);
+        text-decoration: none;
+        
+    }
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: var(--max-width);
+    }
+}

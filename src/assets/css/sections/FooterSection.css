@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-copyright);
+    padding: 25px;
+}
+
+    footer .social-media {
+        margin-bottom: 25px;
+    }
+
+        footer .social-media a {
+            font-size: var(--font-size-14);
+            color: var(--color-dark);
+            text-decoration: none;
+            margin-left: 10px; 
+            margin-right: 10px;
+            transition: all 100ms ease-in-out;
+        }
+
+            footer .social-media a:hover {
+                color: var(--color-theme);
+                text-decoration: none; 
+            }
