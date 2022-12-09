@@ -7,8 +7,8 @@ import MapSection from '../sections/MapSection'
 import MainMenuWhiteSection from '../sections/MainMenuWhiteSection'
 
 
-const ContactsView = () => {
-window.top.document.title = 'Contacts | Fixxo.'
+const ContactsView: React.FC = () => {
+window.parent.document.title = 'Contacts | Fixxo.'
   return (
     <>
       <MainMenuWhiteSection />

@@ -1,6 +1,23 @@
 import React from 'react'
 
-const SupportSection = ({firstH1, secondH1, thirdH1, fourthH1, 
+interface SupportType {
+    firstH1: string
+    secondH1: string
+    thirdH1: string
+    fourthH1: string
+
+    smallTitle1: string
+    smallTitle2: string
+    smallTitle3: string
+    smallTitle4: string
+
+    underTitle1: string
+    underTitle2: string
+    underTitle3: string
+    underTitle4: string
+
+}
+const SupportSection: React.FC<SupportType> = ({firstH1, secondH1, thirdH1, fourthH1, 
                         smallTitle1, smallTitle2, smallTitle3, smallTitle4,
                         underTitle1, underTitle2, underTitle3, underTitle4 }) => {
   return (

@@ -1,8 +1,15 @@
-import React from 'react'
+import {Link} from 'react-router-dom'
 import leftImg from "../assets/images/showcase-img-left.png";
 import rightImg from "../assets/images/showcase-img-right.png";
 
-const ShowcaseSection = ({title1, title2, title3}) => {
+interface showcaseType {
+  title1: string
+  title2: string
+  title3: string
+}
+
+
+const ShowcaseSection: React.FC<showcaseType> = ({title1, title2, title3}) => {
   return (
     <div className="wideShowcase">
         <section className="__showcase container">
@@ -11,13 +18,13 @@ const ShowcaseSection = ({title1, title2, title3}) => {
                 <h1>{title1}</h1>
                 <h1>{title2}</h1>
                 <h3>{title3}</h3> 
-                <button type="submit" className="btn-theme-red">
+                <Link to="/products" className="btn-theme-red">
                     <div className="line-button-l-1"></div>
                     <div className="line-button-l-2"></div>
                     <p>SHOP NOW</p>
                     <div className="line-button-r-1"></div>
                     <div className="line-button-r-2"></div>
-                </button>
+                </Link>
             </div>
             <img src={rightImg} className="__img-right" alt="showcase-img-right" />  
         </section>

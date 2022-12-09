@@ -3,8 +3,14 @@ import { NavLink } from 'react-router-dom'
 import ProductDetails from '../sections/ProductDetails'
 import { useShoppingCart } from '../contexts/ShoppingCartContext'
 import { currencyFormatter } from '../utilities/currencyFormatter'
+import { ProductItem } from '../models/ProductModels'
 
-const ProductCard = ({item, product}) => {
+
+interface ProductCardType {
+    product: ProductItem
+}
+
+const ProductCard: React.FC<ProductCardType> = ({product}) => {
     const { incrementQuantity } = useShoppingCart()
 
 
@@ -31,7 +37,7 @@ const ProductCard = ({item, product}) => {
         </div>
 
         <div className="card-text">
-            <p>{product.articleNumbery}</p>
+            <p>{product.articleNumber}</p>
             <h1 className="h1title">{product.name}</h1>
             <div className="card-stars">
                 <i className="fa-sharp fa-solid fa-star"></i>

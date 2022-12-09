@@ -2,7 +2,14 @@ import React from 'react'
 import bannerRightImg from "../assets/images/banner-right.svg";
 import bannerLeftImg from "../assets/images/banner-left.svg";
 
-const TwoBannersSection = ({titleLeft1, titleLeft2, titleRight1, titleRight2}) => {
+interface TwobannerType {
+    titleLeft1: string
+    titleLeft2: string
+    titleRight1: string
+    titleRight2: string
+}
+
+const TwoBannersSection:React.FC<TwobannerType> = ({titleLeft1, titleLeft2, titleRight1, titleRight2}) => {
   return (
     <div>
         <section className="__banners container">
