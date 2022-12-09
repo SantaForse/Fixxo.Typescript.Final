@@ -11,7 +11,7 @@ import ContactsView from './views/ContactsView';
 import HomeView from './views/HomeView';
 import NotFoundView from './views/NotFoundView';
 import WishListView from './views/WishListView';
-import { ProductProvider} from './contexts/ProductContext';
+import ProductProvider from './contexts/ProductContext';
 import { ShoppingCartProvider} from './contexts/ShoppingCartContext';
 
 function App () {
