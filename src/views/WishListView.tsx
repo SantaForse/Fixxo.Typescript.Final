@@ -5,8 +5,8 @@ import BreadcrumbSection from '../sections/BreadcrumbSection'
 import MainMenuWhiteSection from '../sections/MainMenuWhiteSection'
 
 
-const WishListView = () => {
-  window.top.document.title = 'Wish List | Fixxo.'
+const WishListView: React.FC = () => {
+  window.parent.document.title = 'Wish List | Fixxo.'
   return (
     <>
       <MainMenuWhiteSection />

@@ -8,7 +8,7 @@ import MainMenuWhiteSection from '../sections/MainMenuWhiteSection'
 import { ProductContextType, useProductContext } from '../contexts/ProductContext'
 
 const ProductDetailsView: React.FC = () => {
-  const {id} = useParams()
+  const {id} = useParams<string>()
   const productContext = useProductContext() as ProductContextType
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const ProductDetailsView: React.FC = () => {
   <>
       <MainMenuWhiteSection />
       <BreadcrumbSection currentPage={productContext.product.name} />
-      <ProductDetails product={product} />
+      <ProductDetails product={productContext.product} />
       <FooterSection />
   </>
 )

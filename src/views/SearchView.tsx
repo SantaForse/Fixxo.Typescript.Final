@@ -3,8 +3,8 @@ import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 import MainMenuWhiteSection from '../sections/MainMenuWhiteSection'
 
-const SearchView = () => {
-  window.top.document.title = 'Search | Fixxo.'
+const SearchView: React.FC = () => {
+  window.parent.document.title = 'Search | Fixxo.'
 
   return (
     <>

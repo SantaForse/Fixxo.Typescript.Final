@@ -1,9 +1,15 @@
 import React, {useEffect} from 'react'
 import ProductGridSection from '../sections/ProductGridSection'
-import { useProductContext } from '../contexts/ProductContext'
+import { ProductContextType, useProductContext } from '../contexts/ProductContext'
+import { ProductItem } from '../models/ProductModels'
 
-const FlashFirstSection = ({flashTitle}) => {
-    const {flash, getFlash} = useProductContext()
+interface FlashFirstType {
+    flashTitle: string
+    items?: ProductItem[]
+}
+
+const FlashFirstSection: React.FC<FlashFirstType> = ({flashTitle}) => {
+    const {flash, getFlash} = useProductContext() as ProductContextType
 
     useEffect (() => {
         getFlash(4)

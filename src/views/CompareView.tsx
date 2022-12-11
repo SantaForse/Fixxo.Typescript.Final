@@ -6,8 +6,8 @@ import MainMenuWhiteSection from '../sections/MainMenuWhiteSection'
 
 
 
-const CompareView = () => {
-  window.top.document.title = 'Compare | Fixxo.'
+const CompareView: React.FC = () => {
+  window.parent.document.title = 'Compare | Fixxo.'
   return (
     <>
       <MainMenuWhiteSection />

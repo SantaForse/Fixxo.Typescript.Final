@@ -3,13 +3,13 @@ import FooterSection from '../sections/FooterSection'
 import ProductGridSection from '../sections/ProductGridSection'
 import BreadcrumbSection from '../sections/BreadcrumbSection'
 import MainMenuWhiteSection from '../sections/MainMenuWhiteSection'
-import { useProductContext } from '../contexts/ProductContext'
+import { ProductContextType, useProductContext } from '../contexts/ProductContext'
 
 
-const CategoriesView = () => {
-  const {featured, getFeatured} = useProductContext()
-  const {flash, getFlash} = useProductContext()
-  window.top.document.title = 'Categories | Fixxo.'
+const CategoriesView: React.FC = () => {
+  const {featured, getFeatured} = useProductContext() as ProductContextType
+  const {flash, getFlash} = useProductContext() as ProductContextType
+  window.parent.document.title = 'Categories | Fixxo.'
 
   useEffect (() => {
     getFeatured(8)
