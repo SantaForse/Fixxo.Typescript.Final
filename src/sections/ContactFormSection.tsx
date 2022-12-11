@@ -28,6 +28,7 @@ const ContactForm: React.FC = () => {
 
   const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       const {id, value} = e.target
+      setFormData({...formData, [id]: value})
 
       if (id === 'comments')
           setErrors({...errors, [id]: validateText(id, value, 5)})

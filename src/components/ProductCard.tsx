@@ -37,7 +37,7 @@ const ProductCard: React.FC<ProductCardType> = ({product}) => {
         </div>
 
         <div className="card-text">
-            <p>{product.articleNumber}</p>
+            <p>{product.category}</p>
             <h1 className="h1title">{product.name}</h1>
             <div className="card-stars">
                 <i className="fa-sharp fa-solid fa-star"></i>
