@@ -13,7 +13,7 @@ export interface ProductContextType {
     featured: ProductItem[]
     flash: ProductItem[]
     get: (articleNumber?: string) => void
-    getProducts: (take?: number) =>  void
+    getProducts: () =>  void
     getFeatured: (take?: number) =>  void
     getFlash: (take?: number) =>  void
 }
@@ -22,8 +22,8 @@ export const ProductContext = createContext<ProductContextType | null>(null)
 export const useProductContext = () => { return useContext(ProductContext)}
 
     const ProductProvider: React.FC<ProductProviderType> = ({children}) => {
-    const baseUrl: string = 'https://win22-webapi.azurewebsites.net/api/products'
-    const EMPTY_PRODUCT: ProductItem = { articleNumber: '', name: '', category: '', price: 0, imageName: '', initialprice: 0  }
+    const baseUrl: string = 'http://localhost:5000/api/products'
+    const EMPTY_PRODUCT: ProductItem = { tag: '',  articleNumber: '', description: '', name: '', category: '', price: 0, imageName: '', initialprice: 0  }
     const [product, setProduct] = useState<ProductItem>(EMPTY_PRODUCT)
     const [products, setProducts] = useState<ProductItem[]>([])
     const [featured, setFeatured] = useState<ProductItem[]>([])
@@ -31,36 +31,31 @@ export const useProductContext = () => { return useContext(ProductContext)}
     
     const get = async (articleNumber?: string) => {
         if (articleNumber !== undefined) {
-            const res = await fetch(baseUrl + `/${articleNumber}`)
+            const res = await fetch(`${baseUrl}/details/${articleNumber}`)
             setProduct(await res.json())
         }
     }
 
-    const getProducts = async (take:number = 0) => {
-        let url = baseUrl
-
-        if (take !== 0) 
-            url = baseUrl + `?take=${take}`
-
-        const res = await fetch(url)
+    const getProducts = async () => {
+        const res = await fetch(baseUrl)
         setProducts(await res.json())
     }
 
     const getFeatured = async (take:number = 0) => {
-        let url = baseUrl + `?tag=featured`
+        let url = `${baseUrl}/featured`
 
         if (take !== 0) 
-            url +=  `&take=${take}`
+            url +=  `/${take}`
 
         const res = await fetch(url)
         setFeatured(await res.json())
     }
 
     const getFlash = async (take:number = 0) => {
-        let url = baseUrl + `?tag=flash`
+        let url = `${baseUrl}/flash`
 
         if (take !== 0) 
-            url +=  `&take=${take}`
+            url +=  `/${take}`
 
         const res = await fetch(url)
         setFlash(await res.json())
