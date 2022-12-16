@@ -21,8 +21,8 @@ const CategoriesView: React.FC = () => {
     <>
       <MainMenuWhiteSection />
       <BreadcrumbSection currentPage="Categories" />
-      <ProductGridSection title="Clothes" items={featured}  />
-      <ProductGridSection title="Shoes" items={flash}  />
+      <ProductGridSection title="Featured" items={featured}  />
+      <ProductGridSection title="Flash" items={flash}  />
       <FooterSection />
     </>
   )
