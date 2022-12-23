@@ -9,11 +9,13 @@ import { ProductContextType, useProductContext } from '../contexts/ProductContex
 const CategoriesView: React.FC = () => {
   const {featured, getFeatured} = useProductContext() as ProductContextType
   const {flash, getFlash} = useProductContext() as ProductContextType
+  const {best, getBest} = useProductContext() as ProductContextType
   window.parent.document.title = 'Categories | Fixxo.'
 
   useEffect (() => {
     getFeatured(8)
-    getFlash(8)
+    getFlash(4)
+    getBest(4)
   }, [])
 
   
@@ -23,6 +25,7 @@ const CategoriesView: React.FC = () => {
       <BreadcrumbSection currentPage="Categories" />
       <ProductGridSection title="Featured" items={featured}  />
       <ProductGridSection title="Flash" items={flash}  />
+      <ProductGridSection title="Best reviews" items={best}  />
       <FooterSection />
     </>
   )

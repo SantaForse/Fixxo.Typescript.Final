@@ -7,8 +7,6 @@ interface ShippingCartProviderType {
 }
 
 
-
-
 export interface ShoppingCartContextType {
     items: CartItem[]
     totalQuantity: number

@@ -31,6 +31,7 @@ const MainMenuSection = () => {
         <MenuIcon hideOnMobile={true} quantity={3} link="/wishlist" icon="fa-regular fa-heart" />
         <button className="menu-icons" type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
             <MenuIcon quantity={totalQuantity} icon="fa-regular fa-shopping-bag" />
+        
         </button>
         <button onClick={toggleMenu} className="d-xl-none menu-icon btn-menu-icon"><i className="fa-regular fa-bars"></i></button>
       </div>

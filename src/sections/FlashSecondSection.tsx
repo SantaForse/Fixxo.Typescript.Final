@@ -8,10 +8,10 @@ interface FlashSecondType {
 }
 
 const FlashFirstSection: React.FC<FlashSecondType> = ({flashTitle2}) => {
-    const {flash, getFlash} = useProductContext() as ProductContextType
+    const {best, getBest} = useProductContext() as ProductContextType
 
     useEffect (() => {
-        getFlash(4)
+        getBest(4)
       }, [])
 
   return (
@@ -29,7 +29,7 @@ const FlashFirstSection: React.FC<FlashSecondType> = ({flashTitle2}) => {
             </div>
             <div className="__two-for-left"> 
                 <div className="__two-for-left-grid">
-                    <ProductGridSection items={flash} />
+                    <ProductGridSection items={best} />
                 </div>
             </div>
             <div className="__two-for-right">

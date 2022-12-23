@@ -29,7 +29,9 @@ const MainMenuSection = () => {
         <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" />
         <MenuIcon hideOnMobile={true} link="/compare" icon="fa-regular fa-code-compare" />
         <MenuIcon hideOnMobile={true} quantity={3} link="/wishlist" icon="fa-regular fa-heart" />
-        <MenuIcon quantity={4} link="/shoppingcart" icon="fa-regular fa-shopping-bag" />
+        <button className="menu-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+            <MenuIcon quantity={totalQuantity} icon="fa-regular fa-shopping-bag" />
+        </button>
 
         <button onClick={toggleMenu} className="d-xl-none menu-icon btn-menu-icon"><i className="fa-regular fa-bars"></i></button>
       </div>
