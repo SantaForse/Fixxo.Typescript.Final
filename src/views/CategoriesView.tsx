@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import FooterSection from '../sections/FooterSection'
 import ProductGridSection from '../sections/ProductGridSection'
 import BreadcrumbSection from '../sections/BreadcrumbSection'
-import MainMenuWhiteSection from '../sections/MainMenuWhiteSection'
+import MainMenuSection from '../sections/MainMenuSection'
 import { ProductContextType, useProductContext } from '../contexts/ProductContext'
 
 
@@ -21,7 +21,9 @@ const CategoriesView: React.FC = () => {
   
   return (
     <>
-      <MainMenuWhiteSection />
+      <div className="whiteMainMenu">
+        <MainMenuSection />
+      </div>
       <BreadcrumbSection currentPage="Categories" />
       <ProductGridSection title="Featured" items={featured}  />
       <ProductGridSection title="Flash" items={flash}  />

@@ -4,7 +4,6 @@ import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 import BreadcrumbSection from '../sections/BreadcrumbSection'
 import ProductDetails from '../sections/ProductDetails'
-import MainMenuWhiteSection from '../sections/MainMenuWhiteSection'
 import { ProductContextType, useProductContext } from '../contexts/ProductContext'
 
 const ProductDetailsView: React.FC = () => {
@@ -17,7 +16,9 @@ const ProductDetailsView: React.FC = () => {
 
   return (
   <>
-      <MainMenuWhiteSection />
+      <div className="whiteMainMenu">
+        <MainMenuSection />
+      </div>
       <BreadcrumbSection currentPage={productContext.product.name} />
       <ProductDetails product={productContext.product} />
       <FooterSection />

@@ -22,7 +22,9 @@ const HomeView: React.FC = () => {
   
   return (
     <>
-      <MainMenuSection />
+      <div className="grayMainMenu">
+        <MainMenuSection />
+      </div>
       <ShowcaseSection title1="Sale Up" title2="To 50% Off" title3="Online shopping free home delivery over $100"/>
       <ProductGridSection title="Featured Products" items={featured} />
       <TwoBannersSection titleLeft1="Pamela Reif's" titleLeft2="Top Picks" titleRight1="Let's Be" titleRight2="Conscious" />

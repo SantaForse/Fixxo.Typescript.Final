@@ -4,14 +4,16 @@ import ContactFormSection from '../sections/ContactFormSection'
 import FooterSection from '../sections/FooterSection'
 import MainMenuSection from '../sections/MainMenuSection'
 import MapSection from '../sections/MapSection'
-import MainMenuWhiteSection from '../sections/MainMenuWhiteSection'
+import MainMenuWhiteSection from '../sections/MainMenuSection'
 
 
 const ContactsView: React.FC = () => {
 window.parent.document.title = 'Contacts | Fixxo.'
   return (
     <>
-      <MainMenuWhiteSection />
+      <div className="whiteMainMenu">
+        <MainMenuSection />
+      </div>
       <BreadcrumbSection currentPage="Contacts" />
       <MapSection />
       <ContactFormSection />

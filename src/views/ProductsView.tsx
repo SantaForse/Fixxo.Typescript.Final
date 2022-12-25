@@ -3,7 +3,7 @@ import FooterSection from '../sections/FooterSection'
 import ProductGridSection from '../sections/ProductGridSection'
 import BreadcrumbSection from '../sections/BreadcrumbSection'
 import { ProductContextType, useProductContext } from '../contexts/ProductContext'
-import MainMenuWhiteSection from '../sections/MainMenuWhiteSection'
+import MainMenuSection from '../sections/MainMenuSection'
 
 
 const ProductsView:React.FC = () => {
@@ -16,7 +16,9 @@ const ProductsView:React.FC = () => {
 
   return (
     <>
-      <MainMenuWhiteSection />
+      <div className="whiteMainMenu">
+        <MainMenuSection />
+      </div>
       <BreadcrumbSection currentPage="Products" />
       <ProductGridSection  title="All Products" items={products} />
       <FooterSection />

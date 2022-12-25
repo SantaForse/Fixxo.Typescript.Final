@@ -29,9 +29,9 @@ const MainMenuSection = () => {
         <MenuIcon link="/search" icon="fa-regular fa-magnifying-glass" />
         <MenuIcon hideOnMobile={true} link="/compare" icon="fa-regular fa-code-compare" />
         <MenuIcon hideOnMobile={true} quantity={3} link="/wishlist" icon="fa-regular fa-heart" />
-        <button className="menu-icons" type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
-            <MenuIcon quantity={totalQuantity} icon="fa-regular fa-shopping-bag" />
-        
+        <button  className="menu-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#shoppingCart" aria-controls="shoppingCart">
+            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-theme">{totalQuantity}</span>
+            <i className="fa-regular fa-bag-shopping" ></i>
         </button>
         <button onClick={toggleMenu} className="d-xl-none menu-icon btn-menu-icon"><i className="fa-regular fa-bars"></i></button>
       </div>

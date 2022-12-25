@@ -1,9 +1,15 @@
 .wideMenu {
     width: 100%;
-    background: linear-gradient(90deg, var(--linear-gradient-dark) 0%, var(--linear-gradient-light) 100%); 
+
 }
 
-.mainmenu {
+.grayMainMenu {
+background: linear-gradient(90deg, var(--linear-gradient-dark) 0%, var(--linear-gradient-light) 100%); 
+ }
+
+ 
+
+ .mainmenu{
     display: grid;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -38,7 +44,7 @@
             color: var(--color-main);
             font-weight: var(--font-weight-medium);
             text-decoration: none;
-           margin: 8px 15px;
+            margin: 8px 15px;
             transition: 200ms ease-in-out;  
         }
 
@@ -74,6 +80,7 @@
             transition: 200ms ease-in-out;
         }
 
+
             .mainmenu .menu-icons .menu-icon:hover {
                 color: var(--color-theme);
                 background-color: var(--color-dark);
@@ -87,10 +94,7 @@
             }
 
         .mainmenu .menu-icons .btn-menu-icon {
-            border: none;
-            outline: none;
-            background-color: var(--color-dark);
-            color: var(--color-white);
+            display: none;
         }
 
         button {
@@ -98,7 +102,28 @@
         }
 
    
+        .whiteMainMenu .menu-button {
+            width: 36px;
+            height: 36px;
+            margin-left: 20px;
+            border-radius: 50%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 0 6px 4px var(--color-shadow);
+            transition: 200ms ease-in-out;   
+        }
 
+            .whiteMainMenu .menu-button i {
+                width: 36px;
+                height: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 200ms ease-in-out;
+
+            }
 
 
 
